@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "twerk_grow",
+	"version": "${version}",
+	"name": "Twerk Grow",
+	"description": "Sneak to bonemeal nearby crops, saplings and sugar cane. Grass and flowers are left alone.",
+	"authors": [
+		"Uipg9"
+	],
+	"contact": {
+		"homepage": "https://github.com/Uipg9/twerk-grow"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/twerk_grow/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.brian.twerkgrow.TwerkGrow"
+		],
+		"client": [
+			"dev.brian.twerkgrow.client.TwerkGrowClient"
+		],
+		"fabric-client-gametest": [
+			"dev.brian.twerkgrow.client.TwerkGrowClientGameTest"
+		]
+	},
+	"mixins": [
+		"twerk_grow.mixins.json",
+		{
+			"config": "twerk_grow.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
